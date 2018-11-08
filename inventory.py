@@ -21,7 +21,7 @@ def main():
   site = 'boston'
   env = 'production'
   inventory_in = read_file(site)
-  inventory_out = {}
+  inventory_out = {'_meta': {'hostvars':{}}}
   inventory_out['environment_' + env] = { 'hosts': [] }
   inventory_out['site_' + site] = { 'hosts': [], 'vars': { 'coordinates': inventory_in['coordinates']} }
   inventory_out['node_type_directors'] = { 'hosts': [] }
