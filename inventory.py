@@ -3,6 +3,8 @@
 
 import yaml
 import json
+from os import listdir
+from os.path import isfile, join
 
 def read_file(site):
 
@@ -39,8 +41,6 @@ def main():
         inventory_out['environment_' + env]['hosts'].append(item)
         inventory_out['site_' + site]['hosts'].append(item)    
  
-  #print(inventory_in)
-  #print(inventory_out)
   print(json.dumps(inventory_out))
   
 
