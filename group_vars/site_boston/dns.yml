@@ -2,4 +2,3 @@
 dns_server:
   - 8.8.8.8
 
-mgmt_network: 192.168.1.0/24
